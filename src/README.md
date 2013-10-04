@@ -11,3 +11,6 @@ This project will be build with
 * jquery
 
 
+npm install command in the path "src\client\web" will install necassary packages
+
+
