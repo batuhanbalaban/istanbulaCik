@@ -20,8 +20,13 @@ Var olan excelleri değerlendirerek. Bir minimum ürün (MVP) yapıp deneteceği
 Basitçe şu bilgiler saklanılmak isteniyor.
 
 Kim?
+
 Ne zaman?
+
 Nerede? (Haritadaki yeri)
+
 Ne? (Engel olan ne)
+
 Neden? (Neden bir engel olarak gördü)
+
 Nasıl? (Engeli kaldırtabildiyse)
