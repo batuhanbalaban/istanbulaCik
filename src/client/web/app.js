@@ -3,6 +3,16 @@ var app = express();
  
 app.listen(3000);
 
-app.get('/', function(request, response) {
-   response.send("This would be some HTML");
+// public folders
+app.use('/s',express.static('s'));
+
+app.get('/', function(req, res) {
+   res.sendfile('./views/index.html');
+});
+
+app.post('/', function(req, res) {
+
+	//todo: save form
+
+   res.sendfile('./views/index.html');
 });
