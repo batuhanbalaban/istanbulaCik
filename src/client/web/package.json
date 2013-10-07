@@ -1,9 +1,11 @@
 {
    "name": "istanbulAcik",
    "description": "Basic web form to save street obstacles",
-   "version": "0.0.1-1",
+   "version": "0.0.1-2",
    "dependencies": {
-      "express": "3.x"
+      "express": "3.x",
+      "moment": "*",
+      "mongoose": "*"
    },
    "subdomain": "istacik",
    "scripts": {
