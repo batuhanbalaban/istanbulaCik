@@ -1,0 +1,1 @@
+web: node .\src\client\web\app.js
