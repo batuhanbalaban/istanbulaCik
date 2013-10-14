@@ -16,7 +16,7 @@ var itemSchema = mongoose.Schema({
 });
 var item = mongoose.model('Item', itemSchema);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 // public folder for static files...
 app.use('/s', express.static('s'));
