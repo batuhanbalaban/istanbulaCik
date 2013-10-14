@@ -10,3 +10,7 @@ Gelişmemiş bir ülkede yaşıyoruz. Çünkü bizden öncekiler üzerlerine dü
 Şimdi bizde, bizden öncekiler gibi olup arkamızdan kulağımızı çınlatmasınlar diye en azından kendi sokağımızı takip edelim...
 
 Bu proje insanların sokaklarda daha rahat olabilmesi için bir araç olabilmeyi hedeflemektedir.
+
+Daha fazla bilgi için docs klasöründeki notları okuyabilirsiniz.
+
+Geliştiriciler için src klasöründe ayrıca readme vardır.

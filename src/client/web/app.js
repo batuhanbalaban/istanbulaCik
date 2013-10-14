@@ -3,7 +3,8 @@ var mongoose = require('mongoose');
 var express = require('express');
 var app = express();
 
-mongoose.connect('mongodb://nodejitsu:d14696a62c2f9e0e134d9594d57a44e9@paulo.mongohq.com:10070/nodejitsudb3370222912');
+var dbCnn = process.env.MONGOHQ_URL || 'mongodb://localhost/istanbulacik';
+mongoose.connect(dbCnn);
 
 var itemSchema = mongoose.Schema({
     who: String,
@@ -19,6 +20,7 @@ app.listen(3000);
 
 // public folder for static files...
 app.use('/s', express.static('s'));
+app.use(express.favicon('s/img/favicon.ico')); 
 app.use(express.bodyParser());
 
 app.get('/', function(req, res) {
@@ -39,7 +41,7 @@ app.post('/', function(req, res) {
 	  console.log(result._id);  
 	});
 
-    res.send('Thank you...');
+  res.send('Thank you...');
 });
 
 app.use(function(req, res){ res.send('Hello'); });

@@ -13,8 +13,8 @@ This project will be build with
 
 npm install command in the path "src\client\web" will install necassary packages
 
-app is deployed to nodejitsu.
-http://istacik.jit.su/
+app is deployed to heroku.
+http://blooming-ridge-8038.herokuapp.com/
 
 
 
