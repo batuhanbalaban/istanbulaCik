@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>İstanbul'a Çık! İstanbul Açık Olacak...</title>
+
+   <link rel="stylesheet" href="./s/css/bootstrap-flatly.min.css" media="screen" />  
+	
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+   <script type="text/javascript">
+
+    function success(position) {	  
+	  $("#location").val(position.coords.latitude + ', '+ position.coords.longitude);
+	}
+
+	function error() {	  
+	  
+	}
+
+	$(function() {
+	  $("#time").val(new Date());
+
+	  if (navigator.geolocation) {
+		  navigator.geolocation.getCurrentPosition(success, error);
+		} else { }
+	});    
+
+   </script>
+
+</head>
+ 
+<body>
+
+<div class="container">
+    <h1 style="text-align:center;">hoş geldin, engel dedektifi</h1>
+
+    <p class="text-info" style="text-align:center;">Bu forma karşılaştığın engel ile ilgili bilgileri girmelisin</p>
+<br/>
+<br/>
+
+    <form class="bs-example form-horizontal" method="POST" action="/add">
+    <fieldset>  
+
+      <div class="form-group">
+        <label for="time" class="col-lg-2 control-label">Zaman</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="time" disabled>          
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="name" class="col-lg-2 control-label">Adın</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="name" name="name">          
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="col-lg-2 control-label">Eposta adresin</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="email" name="email">   
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="location" class="col-lg-2 control-label">Nerede?</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" id="location" name="location">   
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description" class="col-lg-2 control-label">Bu engeli neden eklemek istedin?</label>
+        <div class="col-lg-10">
+          <textarea class="form-control" rows="3" id="description" name="description"></textarea>          
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-lg-2 control-label">Ne tarz bir engel?</label>
+        <div class="col-lg-10">
+          <div class="radio">
+            <label>
+              <input type="radio" name="obstacleType" id="opt1" value="option1" checked="">
+              Standartdışı Kaldırım
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="obstacleType" id="opt2" value="option2">
+              Standartdışı Kapı
+            </label>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">                       
+          <button type="submit" class="btn btn-primary">Kaydet</button> 
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+</div> 
+ 
+</body>
+</html>

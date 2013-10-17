@@ -27,7 +27,11 @@ app.get('/', function(req, res) {
    res.sendfile('./views/index.html');
 });
 
-app.post('/', function(req, res) {
+app.get('/add', function(req, res) {
+   res.sendfile('./views/add.html');
+});
+
+app.post('/add', function(req, res) {
 
 	var time = moment().format('YYYY-MM-DD HH:mm');
 	var filledForm = new item({ who: req.body.name, 
